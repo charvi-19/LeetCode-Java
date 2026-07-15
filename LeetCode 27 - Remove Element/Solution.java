@@ -1,0 +1,18 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        if (nums.length == 0) {
+            return 0;
+        }   
+
+        int i = 0; //i tracks where to place the next valid element.
+        for (int j = 0; j < nums.length; j++) { //j scans every element.
+            if (nums[j] != val) {
+                nums[i] = nums[j];
+                i++; 
+            }
+            
+
+        }
+        return i;
+    }
+}
